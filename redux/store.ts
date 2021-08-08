@@ -3,9 +3,9 @@ import logger from 'redux-logger'
 import { configureStore } from '@reduxjs/toolkit'
 import tableReducer, { SliceState } from '../domains/table/slices'
 
-export interface CommonState {
+export interface CommonState<DataSource> {
   loading: boolean
-  data: object[]
+  data: DataSource[]
   error: unknown
 }
 

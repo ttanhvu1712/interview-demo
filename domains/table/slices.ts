@@ -2,11 +2,19 @@ import { combineReducers, createAsyncThunk, createSlice } from '@reduxjs/toolkit
 import { CommonState } from '../../redux/store'
 import axios from '../../axios-settings'
 
+export interface TableResponseData {
+  [propName: string]: string,
+  name: string
+  position: string
+  email: string
+  id: string
+}
+
 const initialState = {
   loading: false,
   data: [],
   error: null,
-} as CommonState
+} as CommonState<TableResponseData>
 
 //getTableSlice
 export const getTableData = createAsyncThunk('getTableData', async (params, { rejectWithValue }) => {
@@ -56,5 +64,5 @@ const reducer = combineReducers({ getTableData: getTableDataReducer })
 export default reducer
 
 export interface SliceState {
-  getTableData: CommonState
+  getTableData: CommonState<TableResponseData>
 }
