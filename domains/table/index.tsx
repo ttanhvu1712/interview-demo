@@ -35,7 +35,7 @@ const AntdTable: React.FC = () => {
         } else return data
       } else return data
     })
-    console.log(newData)
+    setDataSource(newData)
   }
 
   const addNewHandler = () => {
