@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30% auto;
+  padding: 2rem 5rem;
+  background-color: black;
+  border-radius: 1rem;
+  height: max-content;
+  width: 80%;
+
+  .value {
+    width: 20rem;
+    height: 4rem;
+    margin: 1rem auto;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+  }
+
+  .button {
+    width: 20rem;
+    height: 4rem;
+    margin: 0.5rem auto;
+    font-size: 1.5rem;
+    background-color: yellowgreen;
+    border-radius: 1rem;
+    color: black;
+  }
+}
